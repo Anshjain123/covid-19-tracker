@@ -36,7 +36,7 @@ const SelectCountry = ({ setmapCountries, setzoom, setmapcenter, country, countr
             const data = await res.json();
             if (data.countryInfo) {
                 const center = [data.countryInfo.lat, data.countryInfo.long];
-                setzoom(3);
+                // setzoom(3);
                 setmapcenter(center)
             }
             setcountryinfo(data);

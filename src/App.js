@@ -32,7 +32,7 @@ function App() {
         <div className="app__left">
           <div className="app__header">
             <div className="title">
-              <h1 style={{ color: '#CC1034' }}>COVID-19 Tracker</h1>
+              <h1 style={{ color: 'red' }}>COVID-19 Tracker</h1>
             </div>
             <div className="app__dropdown">
               <SelectCountry setmapCountries={setmapCountries} setzoom={setzoom} setmapcenter={setmapcenter} Tabledata={Tabledata} setTabledata={setTabledata} countryinfo={countryinfo} setcountryinfo={setcountryinfo} countries={countries} setcountries={setcountries} country={country} setcountry={setcountry} />

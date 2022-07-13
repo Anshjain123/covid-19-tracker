@@ -4,3 +4,12 @@
 .leaflet-container {
   height: 100%;
 }
+.leaflet-popup-content-wrapper{
+  background: rgb(243, 243, 243) !important;
+  padding: 5px  !important;
+  padding-right: 7px !important;
+  padding-top: 7px !important;
+}
+.leaflet-popup-tip{
+  background: rgb(243, 243, 243) !important; 
+}

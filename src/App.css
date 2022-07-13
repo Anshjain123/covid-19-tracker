@@ -79,6 +79,9 @@
   }
   .app__right {
     flex: 0.25;
-    border: 1px solid red;
+  }
+  .Map{
+    flex:none; 
+    height: 350px;
   }
 }
