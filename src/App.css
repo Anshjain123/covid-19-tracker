@@ -1,0 +1,84 @@
+.app {
+  height: auto;
+  padding: 25px;
+}
+.app__container {
+  display: flex;
+  justify-content: space-around;
+}
+.app__left {
+  flex: 0.7;
+  padding: 10;
+  display: flex;
+  flex-direction: column;
+}
+.app__right {
+  flex: 0.22;
+}
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0.1;
+}
+.info__boxes {
+  display: flex;
+  justify-content: space-between;
+  flex: 0.2;
+}
+.top {
+  padding: 15px;
+  padding-bottom: 7px;
+}
+.bottom {
+  padding: 15px;
+  padding-bottom: 7px;
+}
+.body {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+}
+.Map {
+  flex: 0.78;
+  margin-top: auto;
+  padding: 15px;
+}
+* {
+  margin: 0;
+}
+@media (max-width: 1250px) {
+  .info__boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .box-1 {
+    margin-bottom: 25px;
+  }
+  .box-2 {
+    margin-bottom: 25px;
+  }
+  .box-3 {
+    margin-bottom: 25px;
+  }
+  .app {
+    overflow-y: scroll;
+  }
+  .app::-webkit-scrollbar {
+    display: none;
+  }
+  .app__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .app__left {
+    flex: 0.7;
+  }
+  .app__right {
+    flex: 0.25;
+    border: 1px solid red;
+  }
+}
