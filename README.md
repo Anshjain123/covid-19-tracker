@@ -1,4 +1,4 @@
-<h1>Demo</h1>
+<h1>Live Demo</h1>
 
 ![covid_19_tracker_demo](https://user-images.githubusercontent.com/69351886/179458876-3210cd1d-5fce-4835-a611-a0955324e09a.gif)
 
