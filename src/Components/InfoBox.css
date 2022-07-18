@@ -1,0 +1,9 @@
+.cardContainer:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.card--selected {
+  border-top: 10px solid red;
+}
+.card--color--change {
+  border-top-color: greenyellow;
+}

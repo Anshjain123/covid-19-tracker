@@ -16,23 +16,23 @@ function ChangeMapView({ coords, zoom }) {
   return null;
 }
 
-const Map = ({ countries, center, zoom, caseType = "recovered" }) => {
-
-
+const Map = ({ countries, center, zoom, caseType }) => {
+  // console.log(caseType);
   const casestyles = {
     cases: {
       hex: "#CC1034",
-      multiplier: 5800,
+      multiplier: 3800,
     },
     recovered: {
       hex: "#7dd71d",
-      multiplier: 5800,
+      multiplier: 800,
     },
     deaths: {
       hex: "#fb4443",
       multiplier: 5000,
     }
   }
+
   return (
     <MapContainer className='mapcontainer' center={center} zoom={zoom}   >
       <TileLayer
@@ -42,18 +42,21 @@ const Map = ({ countries, center, zoom, caseType = "recovered" }) => {
       <ChangeMapView coords={center} zoom={zoom} />
       {countries.map((country) => (
         <Circle
+          pathOptions={{
+            color: casestyles[caseType].hex ,
+            fillColor: casestyles[caseType].hex 
+          }}
           center={[country.countryInfo.lat, country.countryInfo.long]}
           fillOpacity={0.4}
-          color={casestyles[caseType].hex}
-          fillColor={casestyles[caseType].hex}
+
           radius={
             Math.sqrt(country[caseType] * casestyles[caseType].multiplier)
           }
         >
           <Popup >
-            <div style = {{height:'100%', width:'100%'}}>
-              <div style={{ backgroundImage: `url(${country.countryInfo.flag})`, height: '100px', width: '107%', marginBottom: '5px', borderRadius: '10px', backgroundSize:'cover', objectFit:'contain', alignSelf:'center' }} />
-              <div style={{ marginLeft:'2px', marginBottom:'5px', fontSize:"15px", fontWeight:'bolder' }}><strong>{country.country}</strong></div>
+            <div style={{ height: '100%', width: '100%' }}>
+              <div style={{ backgroundImage: `url(${country.countryInfo.flag})`, height: '100px', width: '107%', marginBottom: '5px', borderRadius: '10px', backgroundSize: 'cover', objectFit: 'contain', alignSelf: 'center' }} />
+              <div style={{ marginLeft: '2px', marginBottom: '5px', fontSize: "15px", fontWeight: 'bolder' }}><strong>{country.country}</strong></div>
               <div>Cases: {numeral(country.cases).format('0,0')}</div>
               <div>Recovered: {numeral(country.recovered).format('0,0')}</div>
               <div>Deaths: {numeral(country.deaths).format('0,0')}</div>
